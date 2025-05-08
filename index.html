@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="calendar">
+    <div class="calendar-header">
+      <button id="prevMonth">&lt;</button>
+      <h2 id="monthYear"></h2>
+      <button id="nextMonth">&gt;</button>
+    </div>
+    <div class="calendar-weekdays">
+      <div>PN</div>
+      <div>WT</div>
+      <div>ŚR</div>
+      <div>CZ</div>
+      <div>PT</div>
+      <div>SB</div>
+      <div>ND</div>
+    </div>
+    <div class="calendar-days" id="calendarDays"></div>
+  </div>
+
+  <div class="note-modal" id="noteModal">
+    <div class="note-content">
+      <textarea id="noteInput" placeholder="Wpisz notatkę..."></textarea>
+
+      <div id="checklistContainer">
+        <ul id="checklist"></ul>
+        <input type="text" id="newTaskInput" placeholder="Nowe zadanie..." />
+        <button id="addTaskBtn">Dodaj zadanie</button>
+      </div>
+
+      <div class="note-categories">
+        <button data-category="work">Praca</button>
+        <button data-category="personal">Osobiste</button>
+        <button data-category="important">Ważne</button>
+      </div>
+
+      <div class="note-buttons">
+        <button id="saveNote">Zapisz</button>
+        <button id="deleteNote">Usuń</button>
+        <button id="closeModal">Zamknij</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="import-export">
+    <button id="exportBtn">Eksportuj JSON</button>
+    <input type="file" id="importInput" style="display:none;" />
+    <button id="importBtn">Importuj JSON</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
